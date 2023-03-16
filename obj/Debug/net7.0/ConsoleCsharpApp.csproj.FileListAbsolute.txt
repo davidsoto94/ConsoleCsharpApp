@@ -1,0 +1,15 @@
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\bin\Debug\net7.0\ConsoleCsharpApp.exe
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\bin\Debug\net7.0\ConsoleCsharpApp.deps.json
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\bin\Debug\net7.0\ConsoleCsharpApp.runtimeconfig.json
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\bin\Debug\net7.0\ConsoleCsharpApp.dll
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\bin\Debug\net7.0\ConsoleCsharpApp.pdb
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\obj\Debug\net7.0\ConsoleCsharpApp.csproj.AssemblyReference.cache
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\obj\Debug\net7.0\ConsoleCsharpApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\obj\Debug\net7.0\ConsoleCsharpApp.AssemblyInfoInputs.cache
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\obj\Debug\net7.0\ConsoleCsharpApp.AssemblyInfo.cs
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\obj\Debug\net7.0\ConsoleCsharpApp.csproj.CoreCompileInputs.cache
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\obj\Debug\net7.0\ConsoleCsharpApp.dll
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\obj\Debug\net7.0\refint\ConsoleCsharpApp.dll
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\obj\Debug\net7.0\ConsoleCsharpApp.pdb
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\obj\Debug\net7.0\ConsoleCsharpApp.genruntimeconfig.cache
+C:\Users\david.soto\Desktop\personal\ConsoleCsharpApp\obj\Debug\net7.0\ref\ConsoleCsharpApp.dll
