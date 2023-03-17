@@ -1,35 +1,21 @@
+using Bussiness.Strategies.SalesTax;
 
-
-namespace Bussiness.Models.Order
+namespace Bussiness.Models
 {
     public class Order
     {
         public ShippingDetails shippingDetails { get; set; } = new ShippingDetails();
         public List<Item> ListItems { get; set; } = new List<Item>();
         public decimal TotalPrice => ListItems.Sum(item => item.Price);
+        public ISalesTaxStrategy? salesTaxStrategy { get; set; }
 
         public decimal GetTax()
-         {
-            var destination = shippingDetails.DestinationCountry.ToLowerInvariant();
-            if(destination=="sweden"){
-                var origin = shippingDetails.OriginCountry.ToLowerInvariant();
-                if(destination==origin)
-                {
-                    return TotalPrice * 0.15m;
-                }
-                return 0;
-            }
-            if(destination=="us")
+        {
+            if(salesTaxStrategy == null)
             {
-                switch (shippingDetails.DestinationState.ToLowerInvariant())
-                {
-                    case "la":return TotalPrice * 0.095m;
-                    case "ny":return TotalPrice * 0.04m;
-                    case "nyc":return TotalPrice * 0.045m;
-                    default:return 0m;
-                }
+                return 0m;
             }
-            return 0m;
+            return salesTaxStrategy.GetTaxFor(this);
         }
     }
 
@@ -48,20 +34,23 @@ namespace Bussiness.Models.Order
 
     public class Item
     {
-        public Item(string ID,string Name,decimal Price){
+        public Item(string ID,string Name,decimal Price,string ItemType){
             this.ID = ID;
             this.Name = Name;
             this.Price = Price;
+            this.ItemType = ItemType;
         }
         public string ID{ get; set; }
         public string Name{ get; set; }
         public decimal Price { get; set; }
-
+        public string ItemType{ get; set; }
     }
 
     public static class ItemType
     {
-
+        public const string Literature = "Literature";
+        public const string Food = "Food";
+        public const string Other = "Other";
     }
     
 }

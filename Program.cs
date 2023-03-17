@@ -1,4 +1,5 @@
-﻿using Bussiness.Models.Order;
+﻿using Bussiness.Models;
+using Bussiness.Strategies.SalesTax;
 
 namespace Program
 { 
@@ -14,7 +15,16 @@ namespace Program
                     DestinationCountry="Sweden"
                 }
             };
-            order.ListItems.Add(new Item("TestID", "testName", 100));
+            var destination = order.shippingDetails.DestinationCountry.ToLowerInvariant();
+            if(destination=="sweden")
+            {
+                order.salesTaxStrategy = new SwedenSalesTazStrategy();
+            }
+            else if(destination=="us")
+            {
+                order.salesTaxStrategy = new USASalesTazStrategy();
+            }
+            order.ListItems.Add(new Item("TestID", "testName", 100,ItemType.Literature));
             Console.WriteLine(order.GetTax());
 
         }
