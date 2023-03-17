@@ -14,6 +14,8 @@ namespace Program
                     DestinationCountry="Sweden"
                 }
             };
+            order.ListItems.Add(new Item("TestID", "testName", 100));
+            Console.WriteLine(order.GetTax());
 
         }
     }

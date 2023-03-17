@@ -4,9 +4,9 @@ namespace Bussiness.Models.Order
 {
     public class Order
     {
-         public ShippingDetails shippingDetails { get; set;}
-         public List<Item> ListItems { get; set; }
-         public decimal TotalPrice => ListItems.Sum(item => item.Price);
+        public ShippingDetails shippingDetails { get; set; } = new ShippingDetails();
+        public List<Item> ListItems { get; set; } = new List<Item>();
+        public decimal TotalPrice => ListItems.Sum(item => item.Price);
 
         public decimal GetTax()
          {
@@ -35,6 +35,12 @@ namespace Bussiness.Models.Order
 
     public class ShippingDetails
     {
+        public ShippingDetails(){
+            OriginCountry = "";
+            DestinationCountry = "";
+            DestinationState = "";
+        }
+
         public string OriginCountry { get; set;}
         public string DestinationCountry { get; set; }
         public string DestinationState { get; set; }
@@ -42,6 +48,11 @@ namespace Bussiness.Models.Order
 
     public class Item
     {
+        public Item(string ID,string Name,decimal Price){
+            this.ID = ID;
+            this.Name = Name;
+            this.Price = Price;
+        }
         public string ID{ get; set; }
         public string Name{ get; set; }
         public decimal Price { get; set; }
